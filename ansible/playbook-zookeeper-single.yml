@@ -1,0 +1,8 @@
+---
+- hosts: zookeeper
+  become_user: root
+  gather_facts: yes
+  roles:
+          - role: zookeeper-single
+  vars_files:
+          - "vars/zookeeper-single.yml"

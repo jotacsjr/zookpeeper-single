@@ -1,0 +1,17 @@
+---
+zookeeper_hosts
+ - { "ip": "192.168.2.11" , "name": "node-0" , "myid": 1 }
+zookeeper_user: "zookeeper"
+zookeeper_group: "zookeeper"
+zookeeper_system_shell: "/bin/false"
+zookeeper_system_user_home: "/var/lib/{{ zookeeper_user }}"
+zookeeper_path: "/opt/zookeeper"
+zookeeper_log_dir: "{{ zookeeper_path }}/log"
+zookeeper_data_dir: "{{ zookeeper_path }}/var"
+zookeeper_config_file: "{{ zookeeper_path }}/conf/zoo.cfg"
+zookeeper_version_name: "zookeeper-3.4.13"
+zookeeper_package_name: "{{ zookeeper_version_name }}.tar.gz"
+zookeeper_package_url: "https://www-us.apache.org/dist/zookeeper/{{ zookeeper_version_name }}/{{ zookeeper_package_name }}"
+zookeeper_version_path: "/opt/{{ zookeeper_version_name }}"
+zookeeper_min_heap_size: "1024m"
+zookeeper_max_heap_size: "1024m"
